@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.container_library{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    
+    background-color: #14080e;
+    color: aqua;
+    border-radius: 10px;
+    border: 3px solid #4F86C6;
+    margin: 1rem;
+}
+
+.band_container{
+   text-align: center;
+}
+
+.band_logo{
+    width: 400px;
+}
+
+.biograph{
+    padding: 1rem;
+}
