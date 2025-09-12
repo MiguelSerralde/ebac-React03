@@ -10,7 +10,7 @@ const Library = () => {
             try {
                 const response = await axios.get("https://www.theaudiodb.com/api/v1/json/123/search.php?s=daft_punk")
                 setAlbums(response.data.artists)
-                console.log(response)
+                console.log(response.data)
             }catch (error){
                 console.log(error)
             }
@@ -21,16 +21,24 @@ const Library = () => {
 
   return (
     <div className='container_library'>
-        <h2>Band</h2>
+        
         <section className='band_container'>            
             {albums.map((album) => {
-                const { strArtist, idArtist, intBornYear, strArtistLogo, strBiographyES } = album
+                const { strArtist, 
+                        idArtist, 
+                        intBornYear, 
+                        strArtistLogo, 
+                        strBiographyES, 
+                        strArtistBanner, strStyle } = album
                 return(
                     <article key={idArtist}>
-                        <img className='band_logo' alt='' src={strArtistLogo}/>
-                        <h3>{strArtist}</h3>
-                        <p>{intBornYear}</p>                        
-                        <p className='biograph'>{strBiographyES}</p>
+                        <div className='container_logo'>
+                            <img className='band_banner' src={strArtistBanner}/>
+                            <img className='band_logo' alt='' src={strArtistLogo}/>
+                        </div>
+                        <h2>{strArtist}</h2 >
+                        <p><b>Date born:</b>   {intBornYear}</p>                                                
+                        <p><b>Style:</b> {strStyle}</p>
                     </article>
                 )
             })}

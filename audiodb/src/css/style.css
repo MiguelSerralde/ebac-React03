@@ -4,6 +4,21 @@ body {
     justify-content: center;
 }
 
+.search_container{
+    color: cyan;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;    
+}
+
+.search_form {
+    padding: 2rem;
+    font-size: 24px;
+    text-align: center;
+}
+
 .container_library{
     display: flex;
     flex-direction: column;
@@ -21,10 +36,19 @@ body {
    text-align: center;
 }
 
-.band_logo{
-    width: 400px;
+.container_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.biograph{
-    padding: 1rem;
+.band_banner{
+    width: 500px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.band_logo{
+    width: 300px;
 }
