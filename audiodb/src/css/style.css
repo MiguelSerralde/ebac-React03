@@ -77,3 +77,8 @@ body {
 .band_logo{
     width: 300px;
 }
+
+.albums_container {
+    text-align: center;
+    color: cyan;
+}
