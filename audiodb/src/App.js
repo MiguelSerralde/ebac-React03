@@ -9,8 +9,7 @@ function App() {
   const [bandName, setBandName] = useState("")
 
   const handlePrompt = (sendPrompt) => {
-    setBandName = sendPrompt
-    console.log(sendPrompt)
+    setBandName(sendPrompt)    
   }
 
   return (

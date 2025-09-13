@@ -4,12 +4,12 @@ import "../../css/style.css"
 
 const Library = ({artistName}) => {
     const [albums, setAlbums] = useState([])
-    console.log(artistName)
+    //console.log(artistName)
 
     useEffect(() => {
         const fetchAlbums = async () => {
             try {
-                const response = await axios.get("https://www.theaudiodb.com/api/v1/json/123/search.php?s=daft_punk")
+                const response = await axios.get("https://www.theaudiodb.com/api/v1/json/123/search.php?s=" + artistName)
                 setAlbums(response.data.artists)
                 console.log(response.data)
             }catch (error){
