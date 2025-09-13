@@ -19,6 +19,31 @@ body {
     text-align: center;
 }
 
+.search_label{
+    padding: 1rem;
+}
+
+.search_input{
+    padding: 5px;
+    border-radius: 25px;   
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.search_button {
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    width: 100px;
+    font-weight: bold;
+}
+
+.search_button:hover{
+    cursor: pointer;
+    
+}
+
 .container_library{
     display: flex;
     flex-direction: column;

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios"
 import "../../css/style.css"
-const Library = () => {
+
+const Library = ({artistName}) => {
     const [albums, setAlbums] = useState([])
-    
+    console.log(artistName)
 
     useEffect(() => {
         const fetchAlbums = async () => {
