@@ -27,7 +27,11 @@ const Albums = ({artistName}) => {
             <p>{error}</p>
           ) : (
             albums.map((album)=> {
-              const { idAlbum, strAlbum, strAlbumThumb, intYearReleased,strStyle} = album 
+              let { idAlbum, strAlbum, strAlbumThumb, intYearReleased,strStyle} = album 
+              if (!strStyle){
+                strStyle = "Not Data Found"
+              }
+
               return(
                 <article className="album_data" key={idAlbum}>
                   <h3>{strAlbum}</h3>                  
