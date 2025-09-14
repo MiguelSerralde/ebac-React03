@@ -17,7 +17,7 @@ function App() {
       <header className="App-header">
         <Routes>
           <Route path="/" element={<Searchartist sendPrompt={handlePrompt}/>}/>            
-          <Route path="/artist" element={<Library artistName={bandName}/>} />
+          <Route path="/artist" element={<Library artistName={bandName}/>} />          
         </Routes>
 
       </header>

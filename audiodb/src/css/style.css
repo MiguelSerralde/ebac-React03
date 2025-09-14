@@ -68,7 +68,7 @@ body {
 }
 
 .band_banner{
-    width: 500px;
+    width: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 
@@ -81,4 +81,24 @@ body {
 .albums_container {
     text-align: center;
     color: cyan;
+}
+
+.albums_artist {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.album_data {
+    margin: rem;
+    padding: 3rem;    
+}
+
+.album_data:hover {
+    cursor: pointer;
+    border: solid 1px #4F86C6;
+    border-radius: 7px;
+}
+
+.coverAlbum {
+    width: 200px;
 }

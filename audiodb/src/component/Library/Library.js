@@ -15,9 +15,12 @@ const Library = ({artistName}) => {
                 const response = await axios.get("https://www.theaudiodb.com/api/v1/json/123/search.php?s=" + artistName)
                                 
                 if(!response.data.artists){
+                   setArtists([]) 
                    setError("Artist not found")
+                }else {
+                    setArtists(response.data.artists)
+                    setError(null) 
                 }
-                setArtists(response.data.artists) 
 
             }catch (error){
               setError(error)
@@ -25,7 +28,7 @@ const Library = ({artistName}) => {
             
         }        
         fetchArtist()      
-    },[])
+    },[artistName])
 
 
   return (
@@ -58,7 +61,10 @@ const Library = ({artistName}) => {
                 }             
             </section>        
         </div>
-        <Albums/>
+        {artists.length > 0  && (
+        <Albums artistName={artistName} />
+      )}
+        
     </>
   )
 }
