@@ -4,27 +4,27 @@ import "../../css/style.css"
 import Albums from '../Albums/albums'
 
 const Library = ({artistName}) => {
-    const [albums, setAlbums] = useState([])
+    const [artists, setArtists] = useState([])
     const [ song, setSongs ] = useState([])
     const [error, setError] = useState(null)
     //console.log(artistName)
 
     useEffect(() => {
-        const fetchAlbums = async () => {
+        const fetchArtist = async () => {
             try {
                 const response = await axios.get("https://www.theaudiodb.com/api/v1/json/123/search.php?s=" + artistName)
                                 
                 if(!response.data.artists){
                    setError("Artist not found")
                 }
-                setAlbums(response.data.artists) 
+                setArtists(response.data.artists) 
 
             }catch (error){
               setError(error)
             }
             
         }        
-        fetchAlbums()      
+        fetchArtist()      
     },[])
 
 
@@ -35,13 +35,13 @@ const Library = ({artistName}) => {
                 {   error? (
                     <p>{error}</p>
                 ): (
-                    albums.map((album) => {
+                    artists.map((artist) => {
                         const { strArtist, 
                                 idArtist, 
                                 intBornYear, 
                                 strArtistLogo, 
                                 strBiographyES, 
-                                strArtistBanner, strStyle } = album
+                                strArtistBanner, strStyle } = artist
                         return(
                             <article key={idArtist}>
                                 <div className='container_logo'>
