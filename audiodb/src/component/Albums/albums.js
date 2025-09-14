@@ -10,8 +10,7 @@ const Albums = ({artistName}) => {
     const fetchAlbum = async () => {
       try {
         const response = await axios.get("https://www.theaudiodb.com/api/v1/json/123/searchalbum.php?s=" + artistName)
-        setAlbuns(response.data.album)        
-
+        setAlbuns(response.data.album)                
       }catch(error) {
         setError(error)
       }      
