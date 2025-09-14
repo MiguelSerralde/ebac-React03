@@ -102,3 +102,22 @@ body {
 .coverAlbum {
     width: 200px;
 }
+
+@media (max-width: 1180px){
+    .albums_artist {
+        grid-template-columns: repeat(3, 30%);
+    }
+}
+
+@media (max-width: 770px){
+    .albums_artist {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media (max-width: 550px){
+    .albums_artist {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+}

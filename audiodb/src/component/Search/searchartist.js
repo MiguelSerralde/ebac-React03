@@ -27,7 +27,8 @@ const Searchartist = ( {sendPrompt} ) => {
                 <input name="search" 
                     type="text"
                     className="search_input"
-                    placeholder="Search Artist"
+                    placeholder="Search Artist by Name"
+                    required
                     onChange={handleInputChange}/>
             </div>
         <button className='search_button' type="submit" >Search</button>
