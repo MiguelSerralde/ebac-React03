@@ -38,6 +38,9 @@ const Library = ({artistName}) => {
                 {   error? (
                     <p>{error}</p>
                 ): (
+                    setTimeout(() => {
+                        <p style="background-color: cyan;">Loading...</p>
+                    }, 5000),
                     artists.map((artist) => {
                         const { strArtist, 
                                 idArtist, 
